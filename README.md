@@ -3,7 +3,9 @@ Pi5 Anydesk Solution.
 
 Download file: anydesk_FIX_P5_arm64.deb
 
-Follow step by step
+Follow step by step:
+
+---------------------------------------------------
 
 Install necesary dependecies:
 
@@ -15,6 +17,7 @@ sudo dpkg -i anydesk_FIX_P5_arm64.deb
 
 sudo apt-get -f install
 
+---------------------------------------------------
 
 Apply binaries Fixes:
 
@@ -23,6 +26,8 @@ ldd /usr/bin/anydesk | grep "not found"
 cd /usr/lib/aarch64-linux-gnu
 
 sudo ln -s libudev.so.1 libudev.so.0
+
+--------------------------------------------------
 
 Enable Anydesk service:
 
@@ -35,6 +40,8 @@ sudo systemctl enable anydesk.service
 sudo systemctl start anydesk.service
 
 systemctl status anydesk.service
+
+-------------------------------------------------
 
 ENJOY ANYDESK!
 
